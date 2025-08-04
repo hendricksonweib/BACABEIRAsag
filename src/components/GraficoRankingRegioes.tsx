@@ -46,7 +46,7 @@ export const GraficoRankingRegioes = () => {
         if (filtros.escolaId) params.append("escola_id", filtros.escolaId);
         if (filtros.serie) params.append("serie", filtros.serie);
         if (filtros.turmaId) params.append("turma_id", filtros.turmaId);
-        if (filtros.provaId) params.append("prova_id", filtros.provaId); // ✅ corrigido
+        if (filtros.provaId) params.append("prova_id", filtros.provaId); 
 
         const res = await fetch(`${import.meta.env.VITE_API_URL}/api/dashboard/regional-performance?${params.toString()}`);
         const data = await res.json();
